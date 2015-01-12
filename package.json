@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-customtheme",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Gitbook plugin for custom theming integration",
   "main": "index.js",
   "engines": {

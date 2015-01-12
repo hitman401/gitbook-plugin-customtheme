@@ -1,0 +1,27 @@
+{
+  "name": "gitbook-plugin-customtheme",
+  "version": "0.0.2",
+  "description": "Gitbook plugin for custom theming",
+  "main": "index.js",
+  "engines": {
+    "gitbook": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krishnaIndia/gitbook-plugin-customtheme.git"
+  },
+  "keywords": [
+    "Gitbook",
+    "plugin",
+    "theme"
+  ],
+  "author": "Krishna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krishnaIndia/gitbook-plugin-customtheme/issues"
+  },
+  "homepage": "https://github.com/krishnaIndia/gitbook-plugin-customtheme"
+}

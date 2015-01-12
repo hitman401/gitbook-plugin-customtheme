@@ -12,10 +12,15 @@ gitbook can be integrated by passing the styles along with configurations.
           "plugins": ["customtheme"]
 
 3. **Configuring the plugin**
+
          "pluginsConfig": {
             "customtheme": {
-              "css": ['../custom/css/app.css'],
+              "css": ['../custom/css/app.css'], // custom is a folder on the root level
               "js": ['../custom/js/app.js'],
             }
          }
+
+   Pass the list of files to be added on to the body of the gitbook in the configuration section.
+
+Note: Only css and js supported
 

@@ -1,7 +1,7 @@
 {
   "name": "gitbook-plugin-customtheme",
-  "version": "0.0.2",
-  "description": "Gitbook plugin for custom theming",
+  "version": "0.0.3",
+  "description": "Gitbook plugin for custom theming integration",
   "main": "index.js",
   "engines": {
     "gitbook": "*"
@@ -16,7 +16,7 @@
   "keywords": [
     "Gitbook",
     "plugin",
-    "theme"
+    "custom theme"
   ],
   "author": "Krishna",
   "license": "ISC",

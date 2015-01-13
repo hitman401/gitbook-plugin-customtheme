@@ -5,7 +5,7 @@ module.exports = {
     ],
     html: {
       "body:end": function(a) {
-        var config = this.options.pluginsConfig.customTheme || {js:[], css:[]};
+        var config = this.options.pluginsConfig.customtheme || {js:[], css:[]};
         var updateElements;
         updateElements = '';
         if (config.js && config.js.length > 0) {

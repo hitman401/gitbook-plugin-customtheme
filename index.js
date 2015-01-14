@@ -4,21 +4,24 @@ module.exports = {
     js: [
     ],
     html: {
-      "head:end": function() {
-        var config = this.options.pluginsConfig.customtheme || {js:[], css:[], host: 'github'};
+      "head:end": function(cur, b) {
+        var config = this.options.pluginsConfig.customtheme || {js:[], css:[]};
         var updateElements;
         updateElements = '';
         var getPathHierarchy = function() {
           var temp = '';
-          var depth = this._output.split('/');
-          for (var i in depth) {
+          if (!cur._input) {
+            return temp;
+          }
+          var depth = cur._input.split('/');
+          for (var i = 0; i < depth.length - 1; i++) {
             temp += '../';
           }
           return temp;
         };
         var resolvePath = function(fileName) {
           var temp = fileName.replace('../', '');
-          return  getPathHierarchy() + (config.host === 'gitbook' ? 'content/' : '') + temp;
+          return  getPathHierarchy() + temp;
         };
         if (config.js && config.js.length > 0) {
           for (var i in config.js) {
@@ -29,8 +32,7 @@ module.exports = {
           var temp;
           for (var i in config.css) {
             temp = config.css[i].replace('../', '');
-            temp =  (config.host === 'gitbook' ? 'content/' : '') + temp;
-            updateElements += '<link rel="stylesheet" type="text/css" href="' + resolvePath(config.css[i]) +'">';
+            updateElements += '<link rel="stylesheet" type="text/css" href="' + resolvePath(temp) +'">';
           }
         }
         return updateElements;

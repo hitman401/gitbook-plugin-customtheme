@@ -16,11 +16,8 @@ to the gitbook can be integrated by passing the styles along with configurations
          "pluginsConfig": {
             "customtheme": {
               "css": ['custom/css/app.css'], // custom is a folder on the root level
-              "js": ['custom/js/app.js'],
-              "host": "github" // default value is github
+              "js": ['custom/js/app.js']
             }
          }
-   'host' property can accept two options github or gitbook.
-   if gitbook is specified then '/content' is added to the path while building
 
    Pass the list of files to be added on to the body of the gitbook in the configuration section.

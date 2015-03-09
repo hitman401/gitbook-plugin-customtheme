@@ -23,6 +23,9 @@ module.exports = {
           var temp = fileName.replace('../', '');
           return  getPathHierarchy() + temp;
         };
+        if (config.options.ignoreChooseLang && !cur._input && cur.langs) {
+          	return updateElements;
+        }
         if (config.js && config.js.length > 0) {
           for (var i in config.js) {
             updateElements += '<script type="text/javascript" src="' + resolvePath(config.js[i]) + '"></script>';

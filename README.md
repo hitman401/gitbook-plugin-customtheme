@@ -20,4 +20,17 @@ to the gitbook can be integrated by passing the styles along with configurations
             }
          }
 
+ Added Support to additional configuration options,
+ 
+ 1. Add rule to ignore Language Selection page for including resources,
+      "pluginsConfig": {
+            "customtheme": {
+              "css": ['custom/css/app.css'], // custom is a folder on the root level
+              "js": ['custom/js/app.js'],
+              "options": {
+              	"ignoreChooseLang": true
+              }
+            }
+         }      
+
    Pass the list of files to be added on to the body of the gitbook in the configuration section.

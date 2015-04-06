@@ -34,8 +34,10 @@ module.exports = {
         if (config.css && config.css.length > 0) {
           var temp;
           for (var i in config.css) {
-            temp = config.css[i].replace('../', '');
-            updateElements += '<link rel="stylesheet" type="text/css" href="' + resolvePath(temp) +'">';
+            if (config.css.hasOwnProperty(i)) {
+              temp = config.css[i].replace('../', '');
+              updateElements += '<link rel="stylesheet" type="text/css" href="' + resolvePath(temp) +'">';
+            }
           }
         }
         return updateElements;

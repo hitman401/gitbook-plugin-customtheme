@@ -28,7 +28,9 @@ module.exports = {
         }
         if (config.js && config.js.length > 0) {
           for (var i in config.js) {
-            updateElements += '<script type="text/javascript" src="' + resolvePath(config.js[i]) + '"></script>';
+            if (config.js.hasOwnProperty(i)) {
+              updateElements += '<script type="text/javascript" src="' + resolvePath(config.js[i]) + '"></script>';
+            }
           }
         }
         if (config.css && config.css.length > 0) {
